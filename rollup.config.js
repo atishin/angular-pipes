@@ -4,30 +4,30 @@ import uglify from 'rollup-plugin-uglify';
 
 
 const plugins = [
-  nodeResolve({
-    jsnext: true,
-    module: true,
-    extensions: ['.js']
-  })
+    nodeResolve({
+        jsnext: true,
+        module: true,
+        extensions: [ '.js' ]
+    })
 ];
 
 
 let dest = 'bundles/bundle.umd.js';
 
 if (process.env.BUNDLE_MIN === 'true') {
-  dest = 'bundles/bundle.umd.min.js';
-  plugins.push(
-    uglify()
-  );
+    dest = 'bundles/bundle.umd.min.js';
+    plugins.push(
+        uglify()
+    );
 }
 
 export default {
-  entry: 'esm/index.js',
-  dest: dest,
-  format: 'umd',
-  moduleName: 'angular-pipes',
-  external: [
-    '@angular/core'
-  ],
-  plugins: plugins
+    entry: 'esm/index.js',
+    dest: dest,
+    format: 'umd',
+    moduleName: 'angular-pipes-forked',
+    external: [
+        '@angular/core'
+    ],
+    plugins: plugins
 }
