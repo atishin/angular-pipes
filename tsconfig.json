@@ -12,13 +12,17 @@
         "noUnusedParameters": true,
         "suppressImplicitAnyIndexErrors": false,
         "declaration": true,
-	      "lib": ["es6", "dom"]
+        "lib": [
+            "es6",
+            "dom"
+        ]
     },
     "exclude": [
         "node_modules",
         "**/*.spec.ts"
     ],
     "angularCompilerOptions": {
+        "strictMetadataEmit": true,
         "skipTemplateCodegen": true
     }
 }

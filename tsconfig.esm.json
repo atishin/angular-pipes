@@ -9,16 +9,20 @@
         "experimentalDecorators": true,
         "removeComments": false,
         "noImplicitAny": true,
-        "noUnusedLocals": true,        
+        "noUnusedLocals": true,
         "suppressImplicitAnyIndexErrors": false,
         "declaration": true,
-       	"lib": ["es6", "dom"]
+        "lib": [
+            "es6",
+            "dom"
+        ]
     },
     "exclude": [
         "node_modules",
         "**/*.spec.ts"
     ],
     "angularCompilerOptions": {
-        "skipTemplateCodegen": true
+        "skipTemplateCodegen": true,
+        "strictMetadataEmit": true
     }
 }
