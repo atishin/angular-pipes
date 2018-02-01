@@ -22,10 +22,12 @@ if (process.env.BUNDLE_MIN === 'true') {
 }
 
 export default {
-    entry: 'esm/index.js',
-    dest: dest,
-    format: 'umd',
-    moduleName: 'angular-pipes-forked',
+    input: 'esm/index.js',
+    output: {
+        name: 'angular-pipes-forked',
+        format: 'umd',
+        file: dest
+    },
     external: [
         '@angular/core'
     ],
